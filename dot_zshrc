@@ -1,0 +1,41 @@
+eval $(/opt/homebrew/bin/brew shellenv)
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+# Load and initialise completion system
+autoload -Uz compinit
+compinit
+#zoxide conf
+eval "$(zoxide init --cmd cd zsh)"
+alias ..='cd ..'
+
+
+# The fuck
+eval $(thefuck --alias)
+
+alias vim='nvim'
+alias chez='chezmoi'
+alias chezapply='chezmoi -v apply'
+alias editzsh='chezmoi edit ~/.zshrc'
+alias edityabai='nova ~/.config/yabai/yabairc'
+alias editskhd='nova ~/.config/skhd/skhdrc'
+
+alias devmode='yabai --start-service; skhd --start-service; defaults write com.apple.dock autohide -bool true; defaults write com.knollsoft.Hookshot screenEdgeGapBottom 44; brew services start sketchybar; pkill -9 -x '"'"'Rectangle Pro'"'"';'
+alias normalmode='yabai --stop-service; skhd --stop-service; defaults write com.apple.dock autohide -bool false; defaults write com.knollsoft.Hookshot screenEdgeGapBottom 4; brew services stop sketchybar; open -a '"'"'Rectangle Pro'"'"';'
+
+# alias devmode='if [[ "$1" == "on" ]]; then yabai --start-service; skhd --start-service; sketchybar --start-service; elif [[ "$1" == "off" ]]; then yabai --stop-service; skhd --stop-service; sketchybar --stop-service; pkill -9 -x "Rectangle Pro"; fi'
+
+# Define the devmode alias
+# alias devmode='if [[ "$1" == "on" ]]; then yabai --start-service; skhd --start-service; sketchybar --start-service; elif [[ "$1" == "off" ]]; then yabai --stop-service; skhd --stop-service; sketchybar --stop-service; pkill -9 -x "Rectangle Pro"; fi'
+
+alias a='php artisan'
+
+# fastfetch --structure Title:datetime:OS:Uptime:Packages:Terminal:LocalIp:Memory:Disk:Battery
+
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
+# eval "$(starship init zsh)"
