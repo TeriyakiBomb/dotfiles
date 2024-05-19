@@ -16,7 +16,7 @@ alias ..='cd ..'
 # The fuck
 eval $(thefuck --alias)
 
-alias ls='eza -1 --icons'
+alias ls='eza --icons'
 alias ld='eza -l --header --icons --git'
 alias lr='eza --recurse --icons'
 alias lt='eza -T'
