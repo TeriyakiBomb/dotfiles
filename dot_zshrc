@@ -1,4 +1,4 @@
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.3.0/bin:$PATH"
 eval $(/opt/homebrew/bin/brew shellenv)
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
@@ -38,7 +38,7 @@ alias normalmode='yabai --stop-service; skhd --stop-service; defaults write com.
 # alias devmode='if [[ "$1" == "on" ]]; then yabai --start-service; skhd --start-service; sketchybar --start-service; elif [[ "$1" == "off" ]]; then yabai --stop-service; skhd --stop-service; sketchybar --stop-service; pkill -9 -x "Rectangle Pro"; fi'
 
 alias a='php artisan'
-
+alias r='rails'
 # fastfetch --structure Title:datetime:OS:Uptime:Packages:Terminal:LocalIp:Memory:Disk:Battery
 
 export EDITOR=nvim
