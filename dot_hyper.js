@@ -145,6 +145,7 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
+    "editor:moveEndLine": "tab",
   },
 };
 //# sourceMappingURL=config-default.js.map
