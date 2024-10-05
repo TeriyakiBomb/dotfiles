@@ -8,29 +8,31 @@ version = "0.1.0"
 "constant" = "magenta"
 "constant.numeric" = "magenta"
 "constant.character.escape" = "orange"
-"string" = "green"
+"string" = "orange"
 "string.regexp" = "blue"
 "comment" = "#565775"
-"variable" = "fg0"
+"variable" = "yellow"
+"class" = {fg ="purple", modifiers = ["bold"]}
 "variable.builtin" = "blue"
-"variable.parameter" = "fg0"
+"variable.parameter" = "yellow"
 "variable.other.member" = "fg0"
 "label" = "purple"
 "punctuation" = "grey2"
-"punctuation.delimiter" = "grey2"
-"punctuation.bracket" = "fg0"
-"keyword" = "red"
+"punctuation.delimiter" = "lightblue"
+"punctuation.bracket" = "blue2"
+"keyword" = "blue"
 "keyword.directive" = "aqua"
-"operator" = "orange"
+"operator" = "lightblue"
 "function" = "green"
 "function.builtin" = "blue"
 "function.macro" = "aqua"
-"tag" = "yellow"
+"tag" = "magenta"
 "namespace" = "aqua"
-"attribute" = "aqua"
+"attribute" = "green"
 "constructor" = "purple"
 "module" = "blue"
 "special" = "orange"
+"variable.instance_variable" = "magenta"
 
 # Markup
 "markup.heading.marker" = "grey2"
@@ -63,13 +65,13 @@ version = "0.1.0"
 "ui.cursorline.primary" = { bg = "bg1" }
 "ui.cursorline.secondary" = { bg = "bg1" }
 "ui.selection" = { bg = "bg3" }
-"ui.linenr" = "grey0"
-"ui.linenr.selected" = "fg0"
+"ui.linenr" = "#5D5E72"
+"ui.linenr.selected" = "#7262a6E"
 "ui.statusline" = { fg = "fg0", bg = "bg3" }
-"ui.statusline.inactive" = { fg = "grey0", bg = "bg1" }
-"ui.statusline.normal" = { fg = "#000000", bg = "fg0", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "bg0", bg = "yellow", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "bg0", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.inactive" = { fg = "grey0", bg = "bg0" }
+"ui.statusline.normal" = { fg = "bg0", bg = "fg0", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg0", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg0", bg = "pink", modifiers = ["bold"] }
 "ui.bufferline" = { fg = "grey0", bg = "bg1" }
 "ui.bufferline.active" = { fg = "fg0", bg = "bg3", modifiers = ["bold"] }
 "ui.popup" = { fg = "grey2", bg = "bg2" }
@@ -98,16 +100,19 @@ version = "0.1.0"
 bg0 = "#211D2A"
 bg1 = "#322750"
 bg2 = "#49385d"
-bg3 = "#3c3152"
-fg0 = "#f4e6ff"
-grey0 = "#70697d"
-grey2 = "#3c3152"
-red = "#ff5d5d"
-yellow = "#d8a65d"
-green = "#7aea92"
+bg3 = "#4B3E64"
+fg0 = "#EFEAFF"
+grey0 = "#70697D"
+grey2 = "#667E99"
+red = "#FF5D5D"
+yellow = "#FBC664"
+green = "#7AEA92"
 blue = "#7AC3FF"
 orange = "#FF9647"
-purple = "#c792ea"
+purple = "#9983d7"
 magenta = "#F94786"
-aqua = "#5db1b1"
+aqua = "#5DB1B1"
 pink = "#EA7AD5"
+
+lightblue = "#B0DDD2"
+blue2 = "#4E6A97"
