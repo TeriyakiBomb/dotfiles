@@ -41,7 +41,7 @@ alias a='php artisan'
 alias r='rails'
 # fastfetch --structure Title:datetime:OS:Uptime:Packages:Terminal:LocalIp:Memory:Disk:Battery
 
-export EDITOR=nvim
+export EDITOR=hx
 export VISUAL="$EDITOR"
 
 # eval "$(starship init zsh)"
