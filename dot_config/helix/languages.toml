@@ -1,0 +1,19 @@
+[language-server.emmet-ls]
+args = ["--stdio"]
+command = "emmet-ls"
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "emmet-ls"]
+
+[language-server]
+[language-server.ruby-lsp]
+command = "ruby-lsp" 
+args = ["--debug"] 
+
+# ... 
+
+[[language]]
+name = "ruby"
+language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]} ]
+auto-format = true
