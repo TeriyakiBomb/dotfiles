@@ -1,7 +1,6 @@
-
 # theme = "catppuccin_frappe"
-# theme = "ashokai_urple"
-theme = "tokyonight"
+theme = "ashokai_urple"
+# theme = "tokyonight"
 
 [editor]
 line-number = "relative"
@@ -38,4 +37,6 @@ mode.select = "󰇀 Select"
 "C-w" = ":q"
 "C-s" = ":w"
 "esc" = ["collapse_selection",  "keep_primary_selection"]
-
+"C-v" = ":vsplit-new"
+"C-h" = ":hsplit-new"
+"C-e" = ":tree-sitter-scopes"
