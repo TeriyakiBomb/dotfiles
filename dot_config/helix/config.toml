@@ -4,8 +4,8 @@ theme = "ashokai_urple"
 
 [editor]
 line-number = "relative"
+bufferline = "always"
 true-color = true
-bufferline = "multiple"
 color-modes = true
 
 [editor.file-picker]
@@ -34,9 +34,14 @@ mode.select = "󰇀 Select"
 "A-up" = "move_line_up"
 "A-down" = "move_line_down"
 "C-q" = ":qa!"
-"C-w" = ":q"
-"C-s" = ":w"
+"C-w" = ":bc"
 "esc" = ["collapse_selection",  "keep_primary_selection"]
 "C-v" = ":vsplit-new"
 "C-h" = ":hsplit-new"
 "C-e" = ":tree-sitter-scopes"
+"C-j" = "add_newline_below"
+
+"A-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"A-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# "C-S-j" = "add_newline_below"
+"C-k" = "add_newline_above"
