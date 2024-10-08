@@ -51,7 +51,7 @@ version = "0.1.0"
 "markup.raw" = "green"
 
 # Diff
-"diff.plus" = "green"
+"diff.plus" = "diffgreen"
 "diff.delta" = "orange"
 "diff.minus" = "red"
 
@@ -62,8 +62,8 @@ version = "0.1.0"
 "ui.cursor.match" = { fg = "orange", bg = "bg_visual_yellow" }
 "ui.cursor.insert" = { fg = "bg0", bg = "grey2" }
 "ui.cursor.select" = { fg = "bg0", bg = "blue" }
-"ui.cursorline.primary" = { bg = "bg1" }
-"ui.cursorline.secondary" = { bg = "bg1" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+"ui.cursorline.secondary" = { bg = "cursorline" }
 "ui.selection" = { bg = "bg3" }
 "ui.linenr" = "#5D5E72"
 "ui.linenr.selected" = "#7262a6E"
@@ -108,11 +108,13 @@ red = "#FF5D5D"
 yellow = "#FBC664"
 green = "#7AEA92"
 blue = "#7AC3FF"
+blue2 = "#4E6A97"
+lightblue = "#B0DDD2"
+aqua = "#5DB1B1"
 orange = "#FF9647"
 purple = "#9983d7"
 magenta = "#F94786"
-aqua = "#5DB1B1"
 pink = "#EA7AD5"
+cursorline = "#2B2437"
 
-lightblue = "#B0DDD2"
-blue2 = "#4E6A97"
+diffgreen = "#5B7753"
