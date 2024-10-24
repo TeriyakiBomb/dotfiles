@@ -1,6 +1,5 @@
-# Ashoka Purple theme for Helix
 name = "Ashokai Urple"
-author = "Your Name"
+author = "Teriyaki"
 version = "0.1.0"
 
 # Syntax highlighting
@@ -10,14 +9,14 @@ version = "0.1.0"
 "constant.character.escape" = "orange"
 "string" = "orange"
 "string.regexp" = "blue"
-"comment" = "#565775"
+"comment" = "comment"
 "variable" = "yellow"
 "class" = {fg ="purple", modifiers = ["bold"]}
 "variable.builtin" = "blue"
 "variable.parameter" = "yellow"
 "variable.other.member" = "fg0"
 "label" = "purple"
-"punctuation" = "grey2"
+"punctuation" = "grey1"
 "punctuation.delimiter" = "lightblue"
 "punctuation.bracket" = "blue2"
 "keyword" = "blue"
@@ -35,7 +34,7 @@ version = "0.1.0"
 "variable.instance_variable" = "magenta"
 
 # Markup
-"markup.heading.marker" = "grey2"
+"markup.heading.marker" = "grey1"
 "markup.heading.1" = { fg = "purple", modifiers = ["bold"] }
 "markup.heading.2" = { fg = "magenta", modifiers = ["bold"] }
 "markup.heading.3" = { fg = "yellow", modifiers = ["bold"] }
@@ -47,7 +46,7 @@ version = "0.1.0"
 "markup.italic" = { modifiers = ["italic"] }
 "markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
 "markup.link.text" = "magenta"
-"markup.quote" = "grey2"
+"markup.quote" = "grey1"
 "markup.raw" = "green"
 
 # Diff
@@ -57,25 +56,28 @@ version = "0.1.0"
 
 # UI elements
 "ui.background" = { bg = "bg0" }
-"ui.background.separator" = "grey0"
-"ui.cursor" = { fg = "bg0", bg = "fg0" }
+"ui.background.separator" = "grey"
+"ui.cursor" = { fg = "bg0", bg = "cursor" }
 "ui.cursor.match" = { fg = "orange", bg = "bg_visual_yellow" }
-"ui.cursor.insert" = { fg = "bg0", bg = "grey2" }
+"ui.cursor.insert" = { fg = "bg0", bg = "grey1" }
 "ui.cursor.select" = { fg = "bg0", bg = "blue" }
+"ui.cursor.primary" = {fg = "bg0", bg ="fg0"}
+"ui.cursor.primary.normal" = {fg = "bg0", bg ="fg0"}
 "ui.cursorline.primary" = { bg = "cursorline" }
 "ui.cursorline.secondary" = { bg = "cursorline" }
-"ui.selection" = { bg = "bg3" }
-"ui.linenr" = "#5D5E72"
-"ui.linenr.selected" = "#7262a6E"
+"ui.selection" = { bg = "cursorline" }
+"ui.selection.primary" = { bg = "bg2" }
+"ui.linenr" = "line_number"
+"ui.linenr.selected" = "line_number_selected"
 "ui.statusline" = { fg = "fg0", bg = "bg3" }
-"ui.statusline.inactive" = { fg = "grey0", bg = "bg0" }
+"ui.statusline.inactive" = { fg = "grey", bg = "bg0" }
 "ui.statusline.normal" = { fg = "bg0", bg = "fg0", modifiers = ["bold"] }
 "ui.statusline.insert" = { fg = "bg0", bg = "green", modifiers = ["bold"] }
 "ui.statusline.select" = { fg = "bg0", bg = "pink", modifiers = ["bold"] }
-"ui.bufferline" = { fg = "grey0", bg = "bg1" }
+"ui.bufferline" = { fg = "grey", bg = "bg1" }
 "ui.bufferline.active" = { fg = "fg0", bg = "bg3", modifiers = ["bold"] }
-"ui.popup" = { fg = "grey2", bg = "bg2" }
-"ui.window" = { fg = "grey0", bg = "bg0" }
+"ui.popup" = { fg = "grey1", bg = "bg2" }
+"ui.window" = { fg = "grey", bg = "bg0" }
 "ui.help" = { fg = "fg0", bg = "bg2" }
 "ui.text" = "fg0"
 "ui.text.focus" = "fg0"
@@ -99,11 +101,11 @@ version = "0.1.0"
 [palette]
 bg0 = "#211D2A"
 bg1 = "#322750"
-bg2 = "#49385d"
+bg2 = "#49385D"
 bg3 = "#4B3E64"
 fg0 = "#EFEAFF"
-grey0 = "#70697D"
-grey2 = "#667E99"
+grey = "#70697D"
+grey1 = "#667E99"
 red = "#FF5D5D"
 yellow = "#FBC664"
 green = "#7AEA92"
@@ -112,9 +114,15 @@ blue2 = "#4E6A97"
 lightblue = "#B0DDD2"
 aqua = "#5DB1B1"
 orange = "#FF9647"
-purple = "#9983d7"
+purple = "#9983D7"
 magenta = "#F94786"
 pink = "#EA7AD5"
-cursorline = "#2B2437"
 
 diffgreen = "#5B7753"
+
+line_number = "#5D5E72"
+line_number_selected = "#7262A6E"
+comment =  "#565775"
+
+cursor = "#746F7F"
+cursorline = "#2B2437"
