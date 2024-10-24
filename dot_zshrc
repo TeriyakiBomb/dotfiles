@@ -13,7 +13,7 @@ compinit
 eval "$(zoxide init --cmd cd zsh)"
 alias ..='cd ..'
 
-
+# export HELIX_RUNTIME=~/Documents/Dev/helix/runtime 
 # The fuck
 eval $(thefuck --alias)
 

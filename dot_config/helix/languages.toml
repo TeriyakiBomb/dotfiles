@@ -7,7 +7,7 @@ command = "emmet-ls"
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html-language-server", "emmet-ls"]
+language-servers = ["vscode-html-language-server", "emmet-ls", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "html"] }
 
 [[language]]
@@ -27,9 +27,14 @@ auto-format = true
 
 [[language]]
 name = "ruby"
-language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]} ]
+language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]},  "tailwindcss-ls"]
 auto-format = true
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
