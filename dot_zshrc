@@ -6,14 +6,19 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
+
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
+
 #zoxide conf
 eval "$(zoxide init --cmd cd zsh)"
 alias ..='cd ..'
 
-# export HELIX_RUNTIME=~/Documents/Dev/helix/runtime 
+# start zelli with zsh
+eval "$(zellij setup --generate-auto-start zsh)"
+
+# export HELIX_RUNTIME=~/Documents/Dev/helix/runtime
 # The fuck
 eval $(thefuck --alias)
 
@@ -25,17 +30,9 @@ alias lt='eza -T'
 alias vim='nvim'
 alias chez='chezmoi'
 alias chezapply='chezmoi -v apply'
-alias editzsh='chezmoi edit ~/.zshrc'
+alias editzsh='hx ~/.zshrc'
 alias edityabai='nova ~/.config/yabai/yabairc'
 alias editskhd='nova ~/.config/skhd/skhdrc'
-
-alias devmode='yabai --start-service; skhd --start-service; defaults write com.apple.dock autohide -bool true; defaults write com.knollsoft.Hookshot screenEdgeGapBottom 44; brew services start sketchybar; pkill -9 -x '"'"'Rectangle Pro'"'"';'
-alias normalmode='yabai --stop-service; skhd --stop-service; defaults write com.apple.dock autohide -bool false; defaults write com.knollsoft.Hookshot screenEdgeGapBottom 4; brew services stop sketchybar; open -a '"'"'Rectangle Pro'"'"';'
-
-# alias devmode='if [[ "$1" == "on" ]]; then yabai --start-service; skhd --start-service; sketchybar --start-service; elif [[ "$1" == "off" ]]; then yabai --stop-service; skhd --stop-service; sketchybar --stop-service; pkill -9 -x "Rectangle Pro"; fi'
-
-# Define the devmode alias
-# alias devmode='if [[ "$1" == "on" ]]; then yabai --start-service; skhd --start-service; sketchybar --start-service; elif [[ "$1" == "off" ]]; then yabai --stop-service; skhd --stop-service; sketchybar --stop-service; pkill -9 -x "Rectangle Pro"; fi'
 
 alias a='php artisan'
 alias r='rails'
@@ -43,6 +40,34 @@ alias r='rails'
 
 export EDITOR=hx
 export VISUAL="$EDITOR"
+
+#devmode toggle
+devmode_active=0
+
+toggle_mode() {
+  if [[ $devmode_active -eq 0 ]]; then
+    # Enable devmode
+    yabai --start-service
+    skhd --start-service
+    defaults write com.apple.dock autohide -bool true
+    defaults write com.knollsoft.Hookshot screenEdgeGapBottom 44
+    brew services start sketchybar
+    echo "Switched to devmode"
+    devmode_active=1
+  else
+    # Enable normalmode
+    yabai --stop-service
+    skhd --stop-service
+    defaults write com.apple.dock autohide -bool false
+    defaults write com.knollsoft.Hookshot screenEdgeGapBottom 4
+    brew services stop sketchybar
+    echo "Switched to normalmode"
+    devmode_active=0
+  fi
+}
+
+# Add an alias for easy access
+alias devmode="toggle_mode"
 
 # eval "$(starship init zsh)"
 
