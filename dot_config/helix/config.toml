@@ -30,7 +30,7 @@ mode.select = "󰇀 Select"
 
 [keys.normal]
 "C-q" = ":qa!"
-"C-w" = ":bc"
+# "C-w" = ":bc"
 "esc" = ["collapse_selection",  "keep_primary_selection"]
 "C-v" = ":vsplit-new"
 "C-h" = ":hsplit-new"
