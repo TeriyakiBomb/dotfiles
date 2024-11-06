@@ -6,6 +6,8 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "tm4Bit/fzf-zellij"
+plug "Aloxaf/fzf-tab"
 
 # Load and initialise completion system
 autoload -Uz compinit
@@ -18,11 +20,8 @@ alias ..='cd ..'
 # start zelli with zsh
 # eval "$(zellij setup --generate-auto-start zsh)"
 
-alias z='zellij'
 
 # export HELIX_RUNTIME=~/Documents/Dev/helix/runtime
-# The fuck
-eval $(thefuck --alias)
 
 alias ls='eza --icons'
 alias ld='eza -l --header --icons --git'
@@ -30,9 +29,14 @@ alias lr='eza --recurse --icons'
 alias lt='eza -T'
 
 alias vim='nvim'
+alias z='zellij'
+alias zz='fzj'
+alias lz='lazygit'
 alias chez='chezmoi'
 alias chezapply='chezmoi -v apply'
+
 alias editzsh='hx ~/.zshrc'
+alias editzellij= 'hx ~/.config/zellij'
 alias edityabai='hx ~/.config/yabai/yabairc'
 alias editskhd='hx ~/.config/skhd/skhdrc'
 
