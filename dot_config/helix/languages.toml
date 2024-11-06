@@ -9,9 +9,16 @@ command = "emmet-ls"
 name = "html"
 language-servers = ["vscode-html-language-server", "emmet-ls", "tailwindcss-ls"]
 formatter = { command = "prettier", args = ["--parser", "html"] }
+auto-format = true
+
+[[language]]
+name = "css"
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls", "emmet-ls"]
+auto-format = true
 
 [[language]]
 name = "javascript"
+language-servers = [ "typescript-language-server", "eslint", "emmet-ls" ]
 formatter = { command = "prettier", args = ["--parser", "javascript"] }
 auto-format = true
 
@@ -21,23 +28,18 @@ command = "ruby-lsp"
 args = ["--debug"] 
 
 [[language]]
-name = "erb"
-language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]}, "emmet-ls" ]
-auto-format = true
-
-[[language]]
 name = "ruby"
 language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]},  "tailwindcss-ls"]
 auto-format = true
 
 [[language]]
-name = "toml"
-formatter = { command = "taplo", args = ["fmt", "-"] }
+name = "erb"
+language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]}, "emmet-ls" ]
+auto-format = true
 
 [[language]]
-name = "css"
-language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
-
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
 
 [language-server.astro-ls]
 command = "astro-ls"
