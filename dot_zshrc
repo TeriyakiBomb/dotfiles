@@ -39,6 +39,7 @@ alias editzsh='hx ~/.zshrc'
 alias editzellij= 'hx ~/.config/zellij'
 alias edityabai='hx ~/.config/yabai/yabairc'
 alias editskhd='hx ~/.config/skhd/skhdrc'
+alias editghostty='hx ~/.config/ghostty/config'
 
 alias a='php artisan'
 alias r='rails'
@@ -99,3 +100,18 @@ if type brew &>/dev/null; then
     compinit
   fi
 eval "$(atuin init zsh)"
+
+
+# Define a function for searching GitHub
+function web_search() {
+  # Build the search URL
+  url="https://github.com/search?q=$1"
+
+open "$url"
+}
+
+# Define an alias for searching GitHub
+alias github='web_search'
+
+# Ghostty
+alias ghosttydocs='ghostty +show-config --default --docs'

@@ -1,0 +1,10 @@
+font-family = "IosevkaTerm NFM"
+theme = "Banana Blueberry"
+cursor-style = "bar"
+font-size = 14
+macos-option-as-alt = true
+background-opacity = 0.98
+background-blur-radius = 20
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position = "bottom"
