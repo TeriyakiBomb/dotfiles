@@ -115,3 +115,6 @@ alias github='web_search'
 
 # Ghostty
 alias ghosttydocs='ghostty +show-config --default --docs'
+
+
+export HELIX_RUNTIME=~/helix/runtime
