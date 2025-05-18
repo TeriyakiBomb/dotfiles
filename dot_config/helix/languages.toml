@@ -50,3 +50,15 @@ config = {typescript = {tsdk = "/opt/homebrew/lib/node_modules/typescript/lib"},
 name = "astro"
 auto-format = true
 language-servers = [ "astro-ls", "tailwindcss-ls" , "emmet-ls" ]
+
+# https://www.reddit.com/r/HelixEditor/comments/17kizxs/vue3_usage/
+
+[[language]]
+name = "vue"
+auto-format = true
+scope = "scope.vue"
+injection-regex = "vue"
+file-types = ["vue"]
+language-servers = ["volar", "eslint", "emmet-ls"]
+formatter = {command = 'prettier', args = ["--parser", "vue"]}
+
