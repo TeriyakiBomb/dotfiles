@@ -1,2 +1,3 @@
 [flavor]
-use = "catppuccin-mocha"
+dark  = "flexoki-dark"
+light = "flexoki-dark"
