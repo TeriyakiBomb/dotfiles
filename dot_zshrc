@@ -17,13 +17,9 @@ compinit
 eval "$(zoxide init --cmd cd zsh)"
 alias ..='cd ..'
 
-# start zelli with zsh
-# eval "$(zellij setup --generate-auto-start zsh)"
-
-
 # export HELIX_RUNTIME=~/Documents/Dev/helix/runtime
 
-alias ls='eza --icons'
+alias ls='eza --icons --git  --all --group-directories-first'
 alias ld='eza -l --header --icons --git'
 alias lr='eza --recurse --icons'
 alias lt='eza -T'
@@ -36,6 +32,7 @@ alias chez='chezmoi'
 alias chezapply='chezmoi -v apply'
 
 alias editzsh='hx ~/.zshrc'
+alias edityazi= 'hx ~/.config/yazi'
 alias editzellij= 'hx ~/.config/zellij'
 alias edityabai='hx ~/.config/yabai/yabairc'
 alias editskhd='hx ~/.config/skhd/skhdrc'
@@ -43,7 +40,6 @@ alias editghostty='hx ~/.config/ghostty/config'
 
 alias a='php artisan'
 alias r='rails'
-# fastfetch --structure Title:datetime:OS:Uptime:Packages:Terminal:LocalIp:Memory:Disk:Battery
 
 export EDITOR=hx
 export VISUAL="$EDITOR"
@@ -78,6 +74,8 @@ alias devmode="toggle_mode"
 
 # eval "$(starship init zsh)"
 
+alias yz="yazi"
+
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"
@@ -86,12 +84,6 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# # ~/.zshrc
-# export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
-# zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
-# source <(carapace _carapace)
-
 
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -120,5 +112,11 @@ alias ghosttydocs='ghostty +show-config --default --docs'
 export HELIX_RUNTIME=~/helix/runtime
 export PATH="$PATH:$HOME/.config/zide/bin"
 
-# echo 'eval "$(zellij setup --generate-auto-start zsh)"' >> ~/.zshrc
-# eval "$(zellij setup --generate-auto-start zsh)"
+
+# Loading private stuff
+if [[ -f ~/.keys ]]; then
+    source ~/.keys
+    # echo "✓ Keys loaded"
+else
+    # echo "⚠ Keys file not found (this is okay)"
+fi
