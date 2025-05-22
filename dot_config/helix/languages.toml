@@ -22,20 +22,33 @@ language-servers = [ "typescript-language-server", "eslint", "emmet-ls" ]
 formatter = { command = "prettier", args = ["--parser", "javascript"] }
 auto-format = true
 
-[language-server]
+# OLD CONFIG
+
+# [language-server]
+# [language-server.ruby-lsp]
+# command = "ruby-lsp" 
+# args = ["--debug"] 
+
+# [[language]]
+# name = "ruby"
+# language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]}]
+# auto-format = true
+# formatter = { command = "standardrb", args = ["--fix"] }
+
+# [[language]]
+# name = "erb"
+# language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]}, "emmet-ls", "tailwindcss-ls"]
+# auto-format = true
+
+
 [language-server.ruby-lsp]
-command = "ruby-lsp" 
-args = ["--debug"] 
+command = "ruby-lsp"
 
 [[language]]
 name = "ruby"
-language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]},  "tailwindcss-ls"]
+language-servers = ["ruby-lsp", "solargraph"]
 auto-format = true
-
-[[language]]
-name = "erb"
-language-servers = [ { name = "ruby-lsp", only-features = ["format", "diagnostics"]}, {name = "solargraph", except-features = ["format", "diagnostics"]}, "emmet-ls" ]
-auto-format = true
+formatter = {command = "rufo", args = ["--simple-exit"]}
 
 [[language]]
 name = "toml"
